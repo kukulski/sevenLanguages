@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+ournumber = rand(10)
+begin
+  guess = gets
+  guessInt = guess.to_i
+  puts "too high" if guessInt > ournumber
+  puts "too low" if guessInt < ournumber
+end unless guessInt == ournumber

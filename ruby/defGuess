@@ -1,0 +1,16 @@
+#!/usr/bin/ruby
+
+def doguess
+  guess = gets
+  guessInt = guess.to_i
+  puts "too high" if guessInt > ournumber
+  puts "too low" if guessInt < ournumber
+end 
+
+puts "I'm thinking of a number between one and ten (or maybe ten)"
+ournumber = rand(10) + 1
+
+begin
+end while doguess
+
+puts "that's it. I WAS thinking #{ournumber}!"

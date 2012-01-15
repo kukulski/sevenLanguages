@@ -1,0 +1,89 @@
+  PID TTY           TIME CMD
+    1 ??         2:13.89 /sbin/launchd
+   10 ??         0:12.58 /usr/libexec/kextd
+   11 ??         0:49.92 /usr/sbin/DirectoryService
+   12 ??         0:03.11 /usr/sbin/notifyd
+   13 ??         0:00.76 /usr/sbin/diskarbitrationd
+   14 ??         0:19.34 /usr/libexec/configd
+   15 ??         0:15.30 /usr/sbin/syslogd
+   16 ??         0:13.13 /usr/sbin/distnoted
+   17 ??         0:00.58 /usr/sbin/blued
+   19 ??         0:22.69 /usr/sbin/mDNSResponder -launchd
+   22 ??         0:06.51 /usr/sbin/securityd -i
+   24 ??         0:19.90 /System/Library/CoreServices/coreservicesd
+   26 ??         0:04.54 /usr/sbin/ntpd -c /private/etc/ntp-restrict.conf -n -g -p /var/run/ntpd.pid -f /var/db/ntp.drift
+   27 ??         0:00.87 /usr/sbin/cupsd -l
+   29 ??         0:00.78 /usr/sbin/krb5kdc -n
+   30 ??         0:00.14 /usr/sbin/cron
+   34 ??         0:00.34 /sbin/SystemStarter
+   38 ??         0:00.01 /System/Library/CoreServices/RemoteManagement/AppleVNCServer.bundle/Contents/Support/RFBRegisterMDNS
+   40 ??         3:57.07 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+   41 ??         1:25.26 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console
+   42 ??         0:00.66 /usr/sbin/KernelEventAgent
+   44 ??         7:21.58 /usr/libexec/hidd
+   45 ??         0:23.40 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Support/fseventsd
+   47 ??         0:01.62 /sbin/dynamic_pager -F /private/var/vm/swapfile
+   53 ??         0:00.38 autofsd
+   57 ??         0:03.77 /Library/Rapport/bin/rooksd
+   79 ??         0:02.75 /usr/sbin/httpd -D FOREGROUND
+   80 ??         0:00.00 /usr/sbin/httpd -D FOREGROUND
+   87 ??        20:21.96 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Resources/WindowServer -daemon
+  100 ??         1:38.97 /opt/cisco/vpn/bin/vpnagentd -execv_instance
+  104 ??         0:00.09 /Library/Application Support/VMware Fusion/vmnet-natd -c /Library/Application Support/VMware Fusion/vmnet8/nat.conf -m /Library/Application Support/VMware Fusion/vmnet8/nat.mac vmnet8
+  110 ??         0:00.06 /Library/Application Support/VMware Fusion/vmnet-dhcpd -cf /Library/Application Support/VMware Fusion/vmnet8/dhcpd.conf -lf /var/db/vmware/vmnet-dhcpd-vmnet8.leases -pf /var/run/vmnet-dhcpd-vmnet8.pid vmnet8
+  112 ??         0:00.00 /Library/Application Support/VMware Fusion/vmnet-netifup -d /var/run/vmnet-netif-vmnet8.pid vmnet8 vmnet8
+  115 ??         0:00.00 /Library/Application Support/VMware Fusion/vmnet-netifup -d /var/run/vmnet-netif-vmnet1.pid vmnet1 vmnet1
+  116 ??         0:00.05 /Library/McAfee/cma/bin/cma
+  119 ??         0:00.06 /Library/Application Support/VMware Fusion/vmnet-dhcpd -cf /Library/Application Support/VMware Fusion/vmnet1/dhcpd.conf -lf /var/db/vmware/vmnet-dhcpd-vmnet1.leases -pf /var/run/vmnet-dhcpd-vmnet1.pid vmnet1
+  122 ??         0:00.35 /Library/Application Support/VMware Fusion/vmnet-bridge vmnet0 
+  133 ??         0:00.11 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/cvmsServ
+  146 ??         0:02.40 /usr/sbin/coreaudiod
+  244 ??         0:11.68 /sbin/launchd
+  248 ??         0:11.95 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+  249 ??         2:38.95 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+  250 ??         1:30.52 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+  254 ??         0:00.01 /usr/sbin/pboard
+  256 ??         0:11.24 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  261 ??         0:01.24 /usr/libexec/UserEventAgent -l Aqua
+  264 ??         0:00.39 /System/Library/CoreServices/RemoteManagement/AppleVNCServer.bundle/Contents/MacOS/AppleVNCServer
+  269 ??         0:00.53 /System/Library/CoreServices/AirPort Base Station Agent.app/Contents/MacOS/AirPort Base Station Agent -launchd -allowquit
+  270 ??         0:00.88 /Library/Application Support/Tablet/WacomTabletDriver.app/Contents/MacOS/WacomTabletDriver
+  271 ??        24:10.06 /Library/Rapport/bin/rapportd
+  286 ??         0:03.06 /Applications/Evernote.app/Contents/Resources/EvernoteHelper.app/Contents/MacOS/EvernoteHelper -psn_0_69649
+  293 ??         0:00.44 /Library/Application Support/Tablet/WacomTabletDriver.app/Contents/Resources/TabletDriver.app/Contents/MacOS/TabletDriver -psn_0_94231
+ 1129 ??         0:07.55 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd -launchd
+ 1280 ??        10:04.91 /Applications/Mail.app/Contents/MacOS/Mail -psn_0_196656
+ 1323 ??         0:03.39 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell -psn_0_200753
+ 1327 ??         0:00.03 /System/Library/PrivateFrameworks/KerberosHelper.framework/Resources/LKDCHelper
+ 2920 ??         3:05.24 /Applications/OmniFocus.app/Contents/MacOS/OmniFocus -psn_0_360536
+ 3000 ??        27:46.21 /Applications/Safari.app/Contents/MacOS/Safari -psn_0_385118
+ 3466 ??         0:00.63 /Applications/TextEdit.app/Contents/MacOS/TextEdit -psn_0_438379
+ 3642 ??        11:56.65 /Developer/Applications/Xcode.app/Contents/MacOS/Xcode -psn_0_491640
+ 3713 ??         0:00.00 (clang)
+ 3791 ??         0:00.58 /Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/Interface Builder Cocoa Touch Tool --portName AB1CD3E2-461C-4BF2-B5EB-F17C2FBB0EB5
+ 3792 ??         0:00.56 /Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/Interface Builder Cocoa Touch Tool --portName 816CEDC6-6C8A-497D-ADCA-FE2F2F2CFC52
+ 3793 ??         0:00.61 /Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/Interface Builder Cocoa Touch Tool --portName 33348546-0922-409C-868C-447BE143A801
+ 3897 ??         0:00.00 (dvtexec)
+ 3906 ??         0:00.67 /Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/Interface Builder Cocoa Touch Tool --portName E6E97AE5-5221-40D8-B146-260A23DFCBB5
+ 4300 ??         0:17.10 /Applications/Utilities/Terminal.app/Contents/MacOS/Terminal -psn_0_594065
+ 4435 ??         0:00.00 (clang)
+ 7303 ??         0:38.81 /Applications/Skype.app/Contents/MacOS/Skype -psn_0_848079
+ 7433 ??         0:53.05 /Applications/iCal.app/Contents/MacOS/iCal -psn_0_876758
+ 8944 ??         1:29.92 /Applications/iTunes.app/Contents/MacOS/iTunes -psn_0_1007862
+ 8948 ??         0:00.19 /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app/Contents/MacOS/iTunesHelper -psn_0_1016056
+ 8949 ??         0:00.52 /System/Library/PrivateFrameworks/ApplePushService.framework/applepushserviced
+ 9289 ??        10:07.84 /Applications/OmniGraffle Professional 5.app/Contents/MacOS/OmniGraffle Professional -psn_0_1052929
+10252 ??         0:17.21 /Applications/Cisco/Cisco AnyConnect VPN Client.app/Contents/MacOS/Cisco AnyConnect VPN Client -psn_0_1143063
+10286 ??         0:00.16 /usr/bin/ssh-agent -l
+10605 ??         0:36.27 /Applications/Evernote.app/Contents/MacOS/Evernote -psn_0_1196324
+11179 ??        11:30.25 /System/Library/PrivateFrameworks/WebKit2.framework/WebProcess.app/Contents/MacOS/WebProcess /System/Library/PrivateFrameworks/WebKit2.framework/WebKit2 -type webprocess -servicename com.apple.WebKit.WebProcess-3000-0x11d175b68 -localization en_US
+11523 ??         0:09.73 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker MDSImporterWorker com.apple.Spotlight.ImporterWorker.501
+14424 ??         0:00.45 /System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd
+14566 ??         0:00.02 /System/Library/Frameworks/PubSub.framework/Versions/A/Resources/PubSubAgent.app/Contents/MacOS/PubSubAgent
+13604 ttys003    0:00.27 login -pf kukulski
+13605 ttys003    0:00.04 -bash
+13669 ttys003    0:00.15 emacs to_file.rb
+14050 ttys003    0:00.10 emacs 4group
+10483 ttys004    0:00.05 login -pf kukulski
+10484 ttys004    0:00.10 -bash
+14567 ttys004    0:00.00 ps -ax
