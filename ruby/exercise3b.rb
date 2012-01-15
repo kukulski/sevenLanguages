@@ -43,19 +43,24 @@ module ActsAsCsv
        @csv_contents.each { |elt| block.call(elt) }
     end
       
-      class CsvRow
-        
+      class CsvRow 
           
-          def self.headers=(val)
-              @@headers = val
+          def self.headers=(heads)
+            heads.each_index { |idx| add_field(heads[idx],idx) }
           end
-          
+
+          def self.add_field(name,idx) 
+            define_method(name) do
+                @data[idx]
+            end 
+          end
+      
           def initialize(data)
               @data = data
           end
           
           def method_missing name, *args
-              @data[@@headers.index(name.to_s)]
+             "#{name} missing"
           end
           
       end #Csvrow
@@ -75,10 +80,20 @@ class RubyCsv  # no inheritance! You can mix it in
   acts_as_csv
 end
 
+
+class CollideTest  # no inheritance! You can mix it in
+    include ActsAsCsv
+    acts_as_csv
+end
+
 m = RubyCsv.new
 puts m.headers.inspect
 puts m.csv_contents.inspect
 
 puts 'now my code'
 
+m.each {|row| puts row.fish}
 m.each {|row| puts row.last}
+
+n = CollideTest.new
+n.each {|row| puts "#{row.last} fish #{row.fish}"}
