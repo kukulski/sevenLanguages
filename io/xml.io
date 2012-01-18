@@ -1,10 +1,19 @@
-# START:range
-OperatorTable addAssignOperator(":", "atPutNumber")
-# END:range
+OperatorTable addAssignOperator(":", "kvPut")
+
+kvPut := Object getSlot("list")
+
+"a" : "b" writeln
+
+Map kvPut := method(key,val,atPut(key stripQuote, val))
+
+Sequence stripQuote := method(asMutable removePrefix("\"") removeSuffix("\""))
+
+
+
 
 # START:curlyBrackets
 curlyBrackets := method(
-  r := Map clone
+  r := Map clone;
   call message arguments foreach(arg,
        r doMessage(arg)
        )
@@ -12,15 +21,17 @@ curlyBrackets := method(
 )
 # END:curlyBrackets
 
+
 squareBrackets := method ( call message arguments map(elt, doMessage(elt) ))
 
-# START:atPutNumber
-Map atPutNumber := method(
-  self atPut(
-       call evalArgAt(0) asMutable removePrefix("\"") removeSuffix("\""),
-       call evalArgAt(1))
+
+
+Map toXMLAttrs := method(
+    asList map(elt, " " .. elt removeFirst .. "=\"" .. elt removeFirst .. "\"") join(" ")
 )
 
+{ "foo":"bar" } writeln
+{ "foo" : "bar" } toXMLAttrs writeln
 
 
 
@@ -42,9 +53,13 @@ Builder pop := method (self depth = depth - 1)
 
 Builder forward := method(
   tag := call message name
-  writeln(prefix, "<", tag, ">")
+  args := call message arguments
+  argZero := doMessage(args at(0))
+  attrs := if( argZero type == "Map", args removeFirst; argZero, Map clone)
+    
+  writeln(prefix, "<", tag, attrs toXMLAttrs , ">")
   push
-  call message arguments foreach(
+  args foreach(
 	arg, 
 	content := self doMessage(arg); 
 	if(content type == "Sequence", writeln(prefix, content)))
@@ -52,7 +67,9 @@ Builder forward := method(
   writeln(prefix, "</", call message name, ">"))
 
 
-Builder  ul(
+
+
+Builder  ul({"foo":"bar", "boodle":12},
 	li("Io"), 
 	li("Lua"), 
 	li("JavaScript"))
