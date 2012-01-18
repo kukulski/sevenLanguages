@@ -10,8 +10,6 @@ Number threeBranch := method ( less, equal, greater,
 
 
 
-
-
 WarmCold := Object clone
 
 WarmCold start := method(
