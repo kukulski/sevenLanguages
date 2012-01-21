@@ -24,7 +24,7 @@ s2(P,S) :-
 P = S,
 fd_domain(P,1,4),
 length(P,16),
-r4(P,Rows),
+rows(P,4,Rows),
 columns(P,[0,1,2,3] ,Cols),
 squares(P,[0,2,8,10],Squares),
 valid(Rows),
@@ -33,29 +33,29 @@ valid(Cols),
 printboard(P).
 
 
-r2([],[]).
-r2([A,B|Tail],[[A,B]|NewTail]) :- r2(Tail,NewTail).
-
-r4([],[]).
-r4([A,B,C,D|Tail],[[A,B,C,D]|NewTail]) :- r4(Tail,NewTail).
-
-
 peelOff(X,Len,B):- append(A,B,X), length(A,Len).
+peelOff(X,Len,A,B):- append(A,B,X), length(A,Len).
 
+%rows([],[]).
+%rows([A,B,C,D|Tail],[[A,B,C,D]|NewTail]) :- rows(Tail,NewTail).
 
+rows(P,Count,Out):- chunk(P,Count,Out).
 
+fourOdd([],[]).
+fourOdd([A,_,_,_|Tail],[A|NewTail]) :- fourOdd(Tail,NewTail).
+fourOdd([A,_,_],[A]).
+fourOdd([A,_],[A]).
+fourOdd([A],[A]).
 
-odd([],[]).
-odd([A,_|Tail],[A|NewTail]) :- odd(Tail,NewTail).
-odd([A],[A]).
+chunk([],_,[]).
+chunk(Full,ChunkSize,[Col|NewTail]) :- 
+    peelOff(Full,ChunkSize,Col,Tail),
+    chunk(Tail,ChunkSize,NewTail).
 
+item(Full,Index,X) :- peelOff(Full,Index,Tail), Tail = [X|_].
 
-c4([A,B,C|Tail],[AS,BS,CS,DS]) :- 
-    fourOdd([A,B,C|Tail],AS),
-    fourOdd([B,C|Tail],BS),
-    fourOdd([C|Tail],CS),
-    fourOdd(Tail,DS).
-
+count(X,[X|NewTail]):- X > 0, X1 is X-1, count(X1,NewTail).
+count(0,[]).
 
 
 columns(_,[],_).
@@ -68,44 +68,9 @@ squares(_,[],_).
 squares(Puzzle,[Counter|CounterTail],[Square|NewTail]):-
     peelOff(Puzzle,Counter,Shifted),
     square(Shifted,Square),
-    columns(Puzzle,CounterTail,NewTail).
+    squares(Puzzle,CounterTail,NewTail).
 
 square([A,B,_,_,C,D|_],[A,B,C,D]).
-
-
-
-c2([],[]).
-c2([A|Tail],[Col|NewTail]) :- fourOdd([A|Tail],Col), c2(Tail,NewTail), length(Tail,15).
-c2([A|Tail],[Col|NewTail]) :- fourOdd([A|Tail],Col), c2(Tail,NewTail), length(Tail,14).
-c2([A|Tail],[Col|NewTail]) :- fourOdd([A|Tail],Col), c2(Tail,NewTail), length(Tail,13).
-c2([A|Tail],[Col|NewTail]) :- fourOdd([A|Tail],Col), c2(Tail,NewTail), length(Tail,12).
-
-
-threeOdd([],[]).
-threeOdd([A,_,_|Tail],[A|NewTail]) :- threeOdd(Tail,NewTail).
-threeOdd([A,_],[A]).
-threeOdd([A],[A]).
-
-fourOdd([],[]).
-fourOdd([A,_,_,_|Tail],[A|NewTail]) :- fourOdd(Tail,NewTail).
-fourOdd([A,_,_],[A]).
-fourOdd([A,_],[A]).
-fourOdd([A],[A]).
-
-
-
-
-
-
-
-
-
-%rows([A,B,C,D,E,F,G,H,I|Tail],[],Rows) := 
-
-
-%s9(P,S) := P = S,
-
-
 
 
 valid([]).
